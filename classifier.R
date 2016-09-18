@@ -272,6 +272,6 @@ proxy_data <- find_susp_words(proxy_data)
 df <- read.csv(file = "website_hits.csv", header = TRUE, sep = ",")
 proxy_data <- merge(proxy_data, df)
 proxy_data <- proxy_data[,c(2,3,4,1,5:20)]
-
+rm(df)
 #sample_proxy_data <- proxy_data[sample(nrow(proxy_data), 1000), ]
-#result <- write.table(sample_proxy_data, file = "features_extraction.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+#result <- write.table(sample_proxy_data, file = "Sample_Output.txt", sep = "\t", quote = FALSE, row.names = FALSE)
